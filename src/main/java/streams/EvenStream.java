@@ -1,5 +1,6 @@
 package streams;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -11,5 +12,15 @@ public class EvenStream {
                 .collect(Collectors.toList());
 
         System.out.println(someNumbers);
+        System.out.println("==========================================");
+
+        List<String> myList =
+                Arrays.asList("a1", "a2", "b1", "c2", "c1");
+
+        myList.stream()
+                .filter(s -> s.startsWith("c"))
+                .map(s1 -> s1.toUpperCase())
+                .forEach(System.out::println);
+
     }
 }
