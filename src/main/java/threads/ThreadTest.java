@@ -1,6 +1,5 @@
 package threads;
 
-import java.util.concurrent.ExecutorService;
 
 class SomeThread extends Thread {
 
@@ -9,7 +8,7 @@ class SomeThread extends Thread {
             System.out.println("Num: " + i);
         }
     }
-    ExecutorService executorService;
+
     public static void main(String[] args) {
 
         SomeThread someThread1 = new SomeThread();

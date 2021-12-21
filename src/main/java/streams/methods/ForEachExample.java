@@ -15,25 +15,28 @@ public class ForEachExample {
                 });
 
         System.out.println("Below print with method reference");
-
         Arrays.stream(arrayOfNumber)
                 .forEach(System.out::println);
-
+        Utils utilsVariable = new Utils();
         System.out.println("Below print with method reference 2 version");
-
         Arrays.stream(arrayOfNumber)
-                .forEach(Utils::myMethod);
+                .forEach(utilsVariable::myMethod);
 /*          it's same:
         Arrays.stream(arrayOfNumber)
                 .forEach(x -> Utils.myMethod(x));
 */
-
     }
 }
 
 class Utils {
-    public static void myMethod(int a) {
+    public void myMethod(int a) {
         a = a + 5;
         System.out.println("Element = " + a);
     }
+
+    public static void myMethod2(int a) {
+        a = a + 5;
+        System.out.println("Element = " + a);
+    }
+
 }
