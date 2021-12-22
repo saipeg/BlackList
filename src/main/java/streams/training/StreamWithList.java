@@ -3,7 +3,9 @@ package streams.training;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamWithList {
     public static void main(String[] args) {
@@ -36,13 +38,36 @@ public class StreamWithList {
 
         System.out.println(Arrays.toString(array));
 
-        System.out.println("=============================================");
+        System.out.println("====================== filter =======================");
 
         array = Arrays.stream(array)
                 .filter(element -> element % 2 == 0)
                 .toArray();
 
         System.out.println(Arrays.toString(array));
+
+        System.out.println("=================== reduce ==========================");
+
+        Stream<String> wordsStream = Stream.of("мама", "мыла", "раму");
+        Optional<String> sentence = wordsStream.reduce((x, y)->x + " " + y);
+        System.out.println(sentence.get());
+
+        Stream<Integer> numbersStream = Stream.of(1,2,3,4,5,6);
+        Optional<Integer> result = numbersStream.reduce((x,y)->x*y);
+        System.out.println(result.get()); // 720
+
+        System.out.println("=================== parallelStream ==========================");
+
+        List<Double> listDouble = new ArrayList<>();
+        listDouble.add(10.0);
+        listDouble.add(4.0);
+        listDouble.add(1.0);
+        listDouble.add(0.25);
+
+        double divisionResult = listDouble.parallelStream() //or parallelStream
+                .reduce((a, b) -> a / b).get();
+
+        System.out.println("divisionResult = " + divisionResult);
 
 
     }
