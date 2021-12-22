@@ -49,6 +49,7 @@ public class StreamWithList {
         System.out.println("=================== reduce ==========================");
 
         Stream<String> wordsStream = Stream.of("мама", "мыла", "раму");
+        System.out.println();
         Optional<String> sentence = wordsStream.reduce((x, y)->x + " " + y);
         System.out.println(sentence.get());
 
