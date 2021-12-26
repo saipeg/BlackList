@@ -11,3 +11,14 @@ public class MySingleton {
         return mySingleton;
     }
 }
+
+/* public */ class NewSingleton {
+    private static NewSingleton newSingleton;
+    NewSingleton(){}
+
+    public static synchronized NewSingleton getSingleton() {
+        if(newSingleton == null) {
+            newSingleton = new NewSingleton();
+        } return newSingleton;
+    }
+}
