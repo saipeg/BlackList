@@ -1,4 +1,4 @@
-package generics;
+package generics.simpleExample;
 
 import java.util.Date;
 
