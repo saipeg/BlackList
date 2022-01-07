@@ -1,4 +1,4 @@
-package streams.training;
+package streams.training.haveDane;
 
 import java.util.ArrayList;
 import java.util.Arrays;
