@@ -4,16 +4,18 @@ import java.io.IOException;
 
 public class GuessWord {
     public static void main(String[] args) throws IOException {
-        char guessWord, myWord = 'd';
-        int count = 0;
+        char ch, ignore, myWord = 'd';
+        do {
+            System.out.println("Задумана буква из диапазона A-Z.");
+            System.out.println("Попробуй угадать: ");
+            ch = (char) System.in.read();
 
-        while (count < 5) {
-            guessWord = (char) System.in.read();
+            do {
+                ignore = (char) System.in.read();
+            } while (ignore != '\n');
 
-            if (myWord == guessWord) {
+            if (ch == myWord) {
                 System.out.println("Счастливчик, угадал!");
-                break;
-
             } else {
                 System.out.println("Не угадал, попробуй еще");
 //                if (guessWord  < myWord ) {
@@ -22,7 +24,7 @@ public class GuessWord {
 //                    System.out.println("буква ближе к концу алфавита");
 //                }
             }
-            count++;
-        }
+
+        } while (myWord != ch);
     }
 }
