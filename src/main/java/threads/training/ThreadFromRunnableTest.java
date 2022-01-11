@@ -6,7 +6,9 @@ public class ThreadFromRunnableTest implements Runnable {
         System.out.println("Hi from runnable interface(impl) ");
     }
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
         Thread thread = new Thread(new ThreadFromExtThread());
+        thread.start();
+
     }
 }
