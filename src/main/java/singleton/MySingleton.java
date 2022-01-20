@@ -4,7 +4,7 @@ public class MySingleton {
     private static MySingleton mySingleton;
     private MySingleton() {}
 
-    public static MySingleton getSingleton() {
+    public static synchronized MySingleton getSingleton() {
         if(mySingleton == null) {
             mySingleton = new MySingleton();
         }
