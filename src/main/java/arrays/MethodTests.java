@@ -6,6 +6,7 @@ import java.util.List;
 
 public class MethodTests {
     public static void main(String[] args) {
+
         List<Integer> list1 = new ArrayList<>() {{
             add(1);
             add(2);
@@ -20,13 +21,10 @@ public class MethodTests {
             add(2);
         }};
 
-//        result.stream().distinct().forEach(x -> {
-//            if (list2.contains(x) && list3.contains(x))
-//                filtered.add(x);
-//        });
-
         list2.retainAll(list3);
         list2.retainAll(list1);
         System.out.println("List1: " + list2);
     }
+
+
 }
