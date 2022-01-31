@@ -1,4 +1,4 @@
-package april;
+package strings;
 
 public class StringPull {
     public static void main(String[] args) {
