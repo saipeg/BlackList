@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toSet;
+
 public class EvenStream {
     public static void main(String[] args) {
         List<Integer> someNumbers = Stream.of(1, 2, 3, 4, 5, 6, 7, 8)
@@ -23,4 +25,15 @@ public class EvenStream {
                 .forEach(System.out::println);
 
     }
+
+    public void doSmth2() {
+//        Stream<String> myStream = Stream.of("1", "2")
+//                .parallel()
+//                .sequential()
+//                .map(x -> x.length())
+////                .filter(x -> );
+////                .collect(toSet());
+    }
+
+
 }
