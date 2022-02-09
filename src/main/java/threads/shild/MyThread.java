@@ -3,11 +3,9 @@ package threads.shild;
 public class MyThread implements Runnable {
     String thrdName;
 
-
     public MyThread(String thrdName) {
         this.thrdName = thrdName;
     }
-
 
     @Override
     public void run() {
@@ -46,4 +44,3 @@ class UseThreads {
         System.out.println("Завершение основного потока");
     }
 }
-
