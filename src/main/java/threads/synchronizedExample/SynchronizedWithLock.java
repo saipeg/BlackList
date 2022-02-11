@@ -1,5 +1,9 @@
 package threads.synchronizedExample;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+
 public class SynchronizedWithLock {
     public static void main(String[] args) throws InterruptedException {
         Object lock = new Object();
@@ -19,5 +23,12 @@ public class SynchronizedWithLock {
             }
             System.out.println(" ...");
         }
+
+        Collection<?> collection = new HashSet<>();
+        Object object = new Object();
+
+        collection.remove(object);
+
+
     }
 }
