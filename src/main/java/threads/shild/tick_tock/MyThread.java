@@ -1,21 +1,24 @@
 package threads.shild.tick_tock;
 
-public class MyThreed implements Runnable {
+import lombok.SneakyThrows;
 
+public class MyThread implements Runnable {
     Thread thrd;
     TickTock ttOb;
 
-    MyThreed(String name, TickTock tt) {
+    MyThread(String name, TickTock tt) {
         thrd = new Thread(this, name);
         ttOb = tt;
+        thrd.start();
     }
 
-    public static MyThreed createAndStart(String name, TickTock tt) {
-        MyThreed myThreed = new MyThreed(name, tt);
-        myThreed.thrd.start();
-        return myThreed;
+    public static MyThread createAndStart(String name, TickTock tt) {
+        MyThread myThread = new MyThread(name, tt);
+        myThread.thrd.start();
+        return myThread;
     }
 
+    @SneakyThrows
     public void run() {
         if (thrd.getName().compareTo("Tick") == 0) {
             for (int i = 0; i < 5; i++) ttOb.tick(true);
