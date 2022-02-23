@@ -12,7 +12,8 @@ public class MailFormatSendler {
         String signature = scanner.nextLine();
 
         Function<String, String> emailFormatter = text -> {
-            text.split(" | }").
+            text.concat(sender, receiver, signature).split(" | }");
+            return text;
         }; // modify the lambda expression
 
         System.out.println(emailFormatter.apply(scanner.nextLine()));
