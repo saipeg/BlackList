@@ -46,7 +46,7 @@ class RetryUtils {
 
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
-            RetryUtils.retry.run(() -> System.out.println(scanner.nextLine()), MAX_ATTEMPTS, DELAY_MS);
+//            RetryUtils.retry.run(() -> System.out.println(scanner.nextLine()), MAX_ATTEMPTS, DELAY_MS);
         }
     }
 }
