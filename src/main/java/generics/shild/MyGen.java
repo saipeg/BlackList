@@ -1,6 +1,6 @@
 package generics.shild;
 
-public class MyGen<T, V> {
+public class MyGen<T extends String, V> {
     T ob1;
     V ob2;
 

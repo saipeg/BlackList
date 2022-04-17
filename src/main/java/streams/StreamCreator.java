@@ -25,13 +25,14 @@ public class StreamCreator {
         list.stream()
                 .map(i -> i * i)
                 .filter(el -> el > 3)
-                .peek(el -> System.out.println(el)) //(System.out::println)
+                .peek(el -> System.out.println("el :" + el)) //(System.out::println)
                 .limit(10) //пропустит только 10 элементов из всего потока
                 .skip(5) //пропустит 5 и потом будет брать
                 .takeWhile(el -> el > 3) //принимает до тех пор, пока удовлетворяет предикат
                 .dropWhile(el -> el > 3) //отбрасывает элементы пока удовлетворяют предикат, а потом всех пускает
                 .distinct() //пропускает только уникальные элементы
-                .sorted() //сортирует все элементы
+                .sorted()//сортирует все элементы
+                .peek(el -> System.out.println("el! :" + el)) //(System.out::println)
                 .flatMap(el -> Stream.iterate(1, i -> i <= el, i -> i + 1)) //принимает функцию, которая делает из элемента стрим
                 //флэтмэп после преобразования делает отдельные стримы одним общим потоком
                 //2         3           6
