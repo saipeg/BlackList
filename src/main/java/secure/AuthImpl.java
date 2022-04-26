@@ -1,6 +1,8 @@
 package secure;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class AuthImpl {
@@ -10,7 +12,23 @@ public class AuthImpl {
         SecureRandom random = new SecureRandom();
         int num = random.nextInt(100000);
         System.out.println("num = " + num);
+        List<String> list = new ArrayList<>();
+        list.add("ee");
+        list.add("e2");
+        System.out.println("String.format = " + String.format("%04d", list.size() + 1));
         return String.format("%05d", num); //make size to 5 symbols
+    }
+
+    public static void test() {
+        String name = null;
+//        name = "gee!";
+        System.out.println("Name null");
+        if (name == null) {
+            System.out.println("Просто выйдем из метода");
+            return;
+        } else {
+                System.out.println("Тут не налл!");
+            }
     }
 
     public static String generatePasswordWithPolicy() {
@@ -25,6 +43,8 @@ public class AuthImpl {
     }
 
         public static void main (String[]args){
+
+        test();
 
             String password = AuthImpl.generateSmsPassword();
             System.out.println("password = " + password);
