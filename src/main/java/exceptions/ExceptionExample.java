@@ -1,6 +1,6 @@
 package exceptions;
 
-public class exceptions {
+public class ExceptionExample {
 
     public static void main(String[] args) {
 
