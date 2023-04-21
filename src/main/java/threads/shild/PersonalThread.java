@@ -1,9 +1,9 @@
 package threads.shild;
 
-public class MyThread implements Runnable {
+public class PersonalThread implements Runnable {
     String thrdName;
 
-    public MyThread(String thrdName) {
+    public PersonalThread(String thrdName) {
         this.thrdName = thrdName;
     }
 
@@ -28,7 +28,7 @@ class UseThreads {
     public static void main(String[] args) {
         System.out.println("Start main thread #1");
 
-        MyThread myThread = new MyThread("Вложенный поток #2");
+        PersonalThread myThread = new PersonalThread("Вложенный поток #2");
         Thread newThread = new Thread(myThread);
         newThread.start();
 

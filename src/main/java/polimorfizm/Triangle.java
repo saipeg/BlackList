@@ -18,10 +18,10 @@ public class Triangle extends TwoDShape {
         this.style = obj.style;
     }
 
-//    @Override
-//    double area() {
-//        return getWidth() * getHeight() / 2;
-//    }
+    @Override
+    double area() {
+        return getWidth() * getHeight() / 2;
+    }
 
     void showStyle() {
         System.out.println("Треугольник " + style);
