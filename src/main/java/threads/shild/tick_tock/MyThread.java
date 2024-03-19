@@ -12,11 +12,11 @@ public class MyThread implements Runnable {
         thrd.start();
     }
 
-    public static MyThread createAndStart(String name, TickTock tt) {
-        MyThread myThread = new MyThread(name, tt);
-        myThread.thrd.start();
-        return myThread;
-    }
+//    public static MyThread createAndStart(String name, TickTock tt) {
+//        MyThread myThread = new MyThread(name, tt);
+//        myThread.thrd.start();
+//        return myThread;
+//    }
 
     @SneakyThrows
     public void run() {

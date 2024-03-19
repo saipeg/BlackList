@@ -3,14 +3,22 @@ package april;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class ArraysEx {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
-        List<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
+        List<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(3);
+        System.out.println(list.size());
+        Thread.sleep(5000);
+        IntStream.range(0, list.size()).forEach(i -> {
+            list.add(3);
+            System.out.println(i);
+        });
         System.out.println(list);
 
-        list.stream().filter(integer -> integer % 2 == 0).forEach(System.out::println); // link to method
 //      list.stream().filter(integer -> integer % 2 == 0).forEach(integer -> System.out.println(integer));
 
 
