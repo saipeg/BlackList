@@ -2,6 +2,7 @@ package algo._1_merge;
 
 import java.util.Arrays;
 
+//https://leetcode.com/problems/merge-sorted-array/description/?envType=problem-list-v2&envId=m424e3ds&
 public class Merge {
     public static void main(String[] args) {
         int[] numbs1 = new int[10];
