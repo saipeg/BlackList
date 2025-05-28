@@ -31,11 +31,6 @@ public class Merge {
             }
         }
 
-        // Если остались элементы в nums2
-        while (j >= 0) {
-            nums1[k--] = nums2[j--];
-        }
-
         System.out.println(Arrays.toString(nums1));
     }
 
