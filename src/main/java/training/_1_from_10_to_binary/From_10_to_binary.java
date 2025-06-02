@@ -12,8 +12,10 @@ public class From_10_to_binary {
 
         int[] ints1 = from10ToBinary(20);
         int[] ints = from10ToBinary(3112); //110000101000
+        int[] fromString = from10ToBinary(3112); //110000101000
 
-        System.out.println(Arrays.toString(ints1) + "sdsd" + Arrays.toString(ints) );
+        System.out.println("From number" + Arrays.toString(ints1) + "sdsd" + Arrays.toString(ints) );
+        System.out.println("From string: " + Arrays.toString(fromString) );
     }
 
     private static int[] from10ToBinary(int number) {
@@ -28,12 +30,10 @@ public class From_10_to_binary {
         return result.stream().mapToInt(Integer::intValue).toArray();
     }
 
-    private static String from10ToBinary(String number) {
+    private static int[] from10ToBinary(String number) {
+        int i = Integer.parseInt(number);
+        return from10ToBinary(i);
 
-        StringBuffer result = new StringBuffer(number);
-
-
-
-        return "10"; //TODO
     }
+
 }
