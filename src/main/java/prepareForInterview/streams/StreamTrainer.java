@@ -1,6 +1,7 @@
 package prepareForInterview.streams;
 
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamTrainer {
@@ -11,6 +12,7 @@ public class StreamTrainer {
         list.stream()
                 .map(i -> i * i)
                 .filter(el -> el > 3)
-                .peek(el -> System.out.println(el));
+                .peek(el -> System.out.println(el))
+                .collect(Collectors.toList());
     }
 }
